@@ -19,7 +19,7 @@ function Watched(){
         {watched.length > 0 ? (
           <div className="movie-grid">
             {watched.map((movie) => (
-              <MovieCard movie={movie} key={movie.id} type="watched" />
+              <MovieCard movie={movie} key={movie.id} type="watched" image={movie.i.imageUrl}/>
             ))}
           </div>
         ) : (

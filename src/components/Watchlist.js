@@ -18,7 +18,7 @@ return (
       {watchlist.length > 0 ? (
         <div className="movie-grid">
           {watchlist.map((movie) => (
-            <MovieCard movie={movie} key={movie.id} type="watchlist" />
+            <MovieCard image={movie.i.imageUrl} movie={movie} key={movie.id} type="watchlist" />
           ))}
         </div>
       ) : (

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import {GlobalContext} from "../context/GlobalState";
-import Watched from "./Watched";
 
 
 function ListCard({ image, title, movie }){
