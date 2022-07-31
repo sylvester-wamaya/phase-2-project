@@ -41,7 +41,7 @@ function Add(){
                 list.length > 0 && (
                     <ul className='list'>{list.map((movie)=>{
                         return (<li key={movie.l}>
-                            <ListCard image={movie.i.imageUrl} title={movie.l}/>
+                            <ListCard image={movie.i.imageUrl} title={movie.l} movie={movie}/>
                         </li>)
                     })}</ul>
                 )
