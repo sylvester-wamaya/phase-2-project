@@ -1,28 +1,22 @@
 import React from 'react';
-import './App.css';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Routes, Route} from "react-router-dom"
 import Header from './components/Header';
 import Watched from './components/Watched';
 import Watchlist from './components/Watchlist';
 import Add from './components/Add';
+import './App.css';
 import "./lib/font-awesome/css/all.min.css"
 
 function App() {
   return (
     <Router>
       <Header/>
-      <Switch>
-        <Route exact path='/'>
-          <Watchlist/>
-        </Route>
-        <Route path='/wathed'>
-          <Watched/>
-        </Route>
-        <Route path='/add'>
-          <Add/>
-        </Route>
-
-      </Switch>
+      <Routes>
+        <Route exact path='/' element={<Watchlist/>}/>
+        <Route path='/wathed' element={<Watched/>}/>
+        <Route path='/add' element={<Add/>}/>
+        </Routes>
+    
     </Router>
   );
 }
