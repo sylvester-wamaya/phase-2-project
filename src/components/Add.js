@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from "react";
+import ListCard from './ListCard';
 
 function Add(){
 
@@ -39,7 +40,9 @@ function Add(){
             {
                 list.length > 0 && (
                     <ul className='list'>{list.map((movie)=>{
-                        return <li key={movie.l}>{movie.l}</li>
+                        return (<li key={movie.l}>
+                            <ListCard image={movie.i.imageUrl} title={movie.l}/>
+                        </li>)
                     })}</ul>
                 )
             }
