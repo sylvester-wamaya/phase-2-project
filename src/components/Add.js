@@ -23,7 +23,7 @@ function Add(){
             if(!data.error){
                 setList(data.d)
             } else{
-                setList(["No data found"]);
+                setList([{"No data found"}]);
             }
         })},[]);
     }
