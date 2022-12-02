@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import {useState} from "react";
 import ListCard from './ListCard';
 
@@ -17,7 +17,7 @@ function Add(){
             }
         };
 
-        fetch(`https://online-movie-database.p.rapidapi.com/auto-complete?q=${event.target.value}`, options)
+        useEffect(() => {fetch(`https://online-movie-database.p.rapidapi.com/auto-complete?q=${event.target.value}`, options)
         .then((res)=>res.json())
         .then((data)=>{
             if(!data.error){
@@ -25,7 +25,7 @@ function Add(){
             } else{
                 setList(["No data found"]);
             }
-        })
+        })},[]);
     }
   return (
     <div className='add-page'>
